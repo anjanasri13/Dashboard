@@ -1,0 +1,42 @@
+/* *{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+} */
+a{
+  color: white;
+  text-decoration-line: none;
+}
+.one{
+   /* display: inline-block; */
+   background-color: #153D5F;
+   color: white;
+   padding: 0px 50px 0px 40px;
+   margin-top: 40px;
+   margin-left: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.two{
+  display: flex;
+  background-color: #E6E9EE;
+  margin-top: 40px;
+  padding-right: 700px;
+  padding-left: 40px;
+}
+.three{
+    background-color: #153D5F;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 25px;
+    margin-left: 10px;
+    font-size: large;
+}
+.four{
+    background-color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 17px 25px;
+    margin: 59px 0px 50px 30px;
+    font-size: large;
+}
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/fab1f8bdcb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="dash.css">
+    <script>
+      window.onload = function () {
+      
+      var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        exportEnabled: true,
+        theme: "light1", // "light1", "light2", "dark1", "dark2"
+        title:{
+          text: "Simple Column Chart with Index Labels"
+        },
+          axisY: {
+            includeZero: true
+          },
+        data: [{
+          type: "column", //change type to bar, line, area, pie, etc
+          //indexLabel: "{y}", //Shows y value on all Data Points
+          indexLabelFontColor: "#5A5757",
+              indexLabelFontSize: 16,
+          indexLabelPlacement: "outside",
+          dataPoints: [
+            { x: 10, y: 71 },
+            { x: 20, y: 55 },
+            { x: 30, y: 50 },
+            { x: 40, y: 65 },
+            { x: 50, y: 92, indexLabel: "\u2605 Highest" },
+            { x: 60, y: 68 },
+            { x: 70, y: 38 },
+            { x: 80, y: 71 },
+            { x: 90, y: 54 },
+            { x: 100, y: 60 },
+            { x: 110, y: 36 },
+            { x: 120, y: 49 },
+            { x: 130, y: 21, indexLabel: "\u2691 Lowest" }
+          ]
+        }]
+      });
+      chart.render();
+      
+     
+var chart1 = new CanvasJS.Chart("chartContainer1", {
+	theme: "dark1", // "light1", "ligh2", "dark1", "dark2"
+	animationEnabled: true,
+	title: {
+		text: "Company Finance"
+	},
+	axisY: {
+		title: "Amount (in USD)",
+		prefix: "$",
+		suffix: "k",
+		lineThickness: 0,
+		includeZero: true
+	},
+	data: [{
+		type: "waterfall",
+		indexLabel: "{y}",
+		indexLabelFontColor: "#EEEEEE",
+		indexLabelPlacement: "inside",
+		yValueFormatString: "#,##0k",
+		dataPoints: [
+			{ label: "Sales",  y: 1273 },
+			{ label: "Service", y: 623 },
+			{ label: "Total Revenue", isIntermediateSum: true},
+			{ label: "Research", y: -150 },
+			{ label: "Marketing",  y: -226 },
+			{ label: "Salaries", y: -632 },
+			{ label: "Operating Income", isCumulativeSum: true },
+			{ label: "Taxes",  y: -264 },
+			{ label: "Net Income",  isCumulativeSum: true }
+		]
+	}]
+});
+chart1.render();
+      }
+  </script>
+</head>
+
+<body>
+ <div style="display: inline-flex;">
+    <div class="one">
+    <p style="padding-left:65px;padding-top: 20px;"><i class="fa-solid fa-user"></i></p>
+    <h4 style="font-family: Arial, Helvetica, sans-serif;padding-left: 30px;">JOHN DON </h4>
+    <h5  style="font-family: Arial, Helvetica, sans-serif;font-weight: lighter;">johndon@company.com</h5>
+    <a href=""><i class="fa-solid fa-house"></i>&emsp; Home</a><br><br>
+    <a href=""><i class="fa-solid fa-file"></i> &emsp; &nbsp;File</a><br><br>
+    <a href=""><i class="fa-solid fa-message"></i> &emsp;Message</a><br><br>
+    <a href=""><i class="fa-solid fa-bell"></i> &emsp;Notification</a><br><br>
+    <a href=""><i class="fa-solid fa-location-dot"></i> &emsp; Location</a><br><br>
+    <a href=""><i class="fa-solid fa-chart-simple"></i> &emsp; Graph</a>
+    </div>
+
+    <div style="background-color:#E6E9EE;margin-top: 40px;padding: 0px 40px 20px 0px;">
+       <div class="two">
+         <div>
+           <h4  style="font-family: Arial, Helvetica, sans-serif; margin-left: 5px;">Dashboard User</h4>
+           <p class="three">Earning &emsp;<i class="fa-solid fa-comment-dollar"></i><br><br>
+           &#36; &emsp; 628</p>
+         </div>
+         <div>
+           <p class="four">Share &emsp;<span style="color: #F79B25;"><i class="fa-solid fa-share-nodes"></i></span><br><br>2434</p>
+         </div>
+         <div>
+          <p class="four">Likes &emsp;<span style="color: #F79B25;"><i class="fa-solid fa-thumbs-up"></i></span><br><br>1259</p>
+         </div>
+         <div>
+          <p class="four">Rating &emsp;<span style="color: #F79B25;"><i class="fa-solid fa-star"></i></span><br><br>8,5</p>
+         </div>
+       </div>
+       <div style="margin-left: 30px;width: 900px;">
+         <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+       </div>
+      <div style="margin-left: 30px;margin-top: 20px;width: 900px;">
+        <div id="chartContainer1" style="height: 370px; width: 100%;"></div>
+      </div>
+    </div>
+    
+  </div>
+ 
+ <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+
+</body>
+</html>
+<!-- https://www.freepik.com/free-vector/user-panel-template-infographic-dashboard_6208217.htm#query=dashboard%20design&position=1&from_view=keyword&track=ais -->
